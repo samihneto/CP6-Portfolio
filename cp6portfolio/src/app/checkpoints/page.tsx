@@ -1,6 +1,6 @@
 "use client";
 
-import CpCard from '@/components/CpCard/cpCard';
+import CpCard from '@/components/CpCard/CpCard';
 import React, { useState } from 'react';
 
 // Definindo o tipo para o aluno
