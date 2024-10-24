@@ -3,27 +3,28 @@ import React from 'react'
 import Image from 'next/image'
 import Logo from '../../img/logofiap.png'
 
+
 export default function Header() {
   return (
-    <header>
+    <header className="bg-[#181818] flex justify-center gap-x-10">
       <Image 
       src={Logo}
-      width={100}
+      width={150}
       height={50}
       alt={''} />
-      <nav>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
+      <nav className="flex items-center">
+        <ul className="flex space-x-4">
+          <li className="text-white font-montserrat font-medium hover:font-black">
+            <Link href="/">HOME</Link>
           </li>
-          <li>
-            <Link href="/checkpoints">Checkpoints</Link>
+          <li className="text-white font-montserrat font-medium hover:font-black">
+            <Link href="/checkpoints">CHECKPOINT</Link>
           </li>
-          <li>
-            <Link href="/globals">Global Sollutions</Link>
+          <li className="text-white font-montserrat font-medium hover:font-black">
+            <Link href="/global">GLOBAL SOLLUTION</Link>
           </li>
-          <li>
-            <Link href="/sprints">Challenge Sprints</Link>
+          <li className="text-white font-montserrat font-medium hover:font-black">
+            <Link href="/sprints">CHALLENGE</Link>
           </li>
         </ul>
       </nav>

@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        rosa: "#e6376d"
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', 'ui-sans-serif', 'system-ui'],
       },
     },
   },
