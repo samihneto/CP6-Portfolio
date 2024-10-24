@@ -5,18 +5,18 @@ interface Aluno {
   nome: string;
 }
 
-interface CpCardProps {
+interface ChallengeCardProps {
   alunoCp: Aluno | null; // Aceitar um objeto Aluno ou null
 }
 
-export default function CpCard({ alunoCp }: CpCardProps) {
+export default function ChallengeCard({ alunoCp }: ChallengeCardProps) {
   return (
     <div 
       className="bg-white flex flex-col gap-y-6 w-96 p-6 rounded shadow-lg"
       onClick={(e) => e.stopPropagation()} // Para evitar fechar o modal ao clicar no conteúdo
     >
       <h1 className="text-[#181818] font-montserrat font-black text-3xl">
-        Lista de Checkpoints do aluno: 
+        Lista de Challenge do aluno: 
       </h1>
       <div className="flex bg-rosa w-auto p-2 rounded-lg justify-self-center justify-center">
         <h2 className="text-white font-montserrat font-black text-2xl">{alunoCp ? alunoCp.nome : 'Não há aluno selecionado'}</h2>

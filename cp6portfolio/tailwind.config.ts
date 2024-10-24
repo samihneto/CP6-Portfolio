@@ -11,7 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        rosa: "#e6376d"
+        rosa: "#e6376d",
+        preto: "#181818"
       },
       fontFamily: {
         montserrat: ['Montserrat', 'ui-sans-serif', 'system-ui'],
