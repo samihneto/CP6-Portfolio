@@ -31,8 +31,8 @@ export default function Sprints() {
 
   return (
     <div>
-      <div className="bg-rosa p-4 flex justify-center">
-        <h1 className="text-white text-xl font-montserrat font-semibold">Global Solutions</h1>
+      <div className="bg-rosa p-8 flex justify-center">
+        <h1 className="text-white text-6xl font-montserrat font-semibold">Global Solutions</h1>
       </div>
       <div className="flex flex-col justify-center items-center p-10 gap-y-10">
         {alunos.map((aluno) => (
