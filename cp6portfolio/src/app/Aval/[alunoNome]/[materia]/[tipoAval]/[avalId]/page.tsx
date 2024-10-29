@@ -1,4 +1,4 @@
-import { Props } from '../../../../../../interface/interface';
+import { Props } from '@/interface/interface';
 
 export default async function AvalId ({params}: Props) {
   
