@@ -1,5 +1,7 @@
 export interface Props {
     params: {
+        cpId: ReactNode;
+        id: ReactNode;
         materia: string;
         avalId: number;
         tipoAval: string;
