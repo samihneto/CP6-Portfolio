@@ -7,9 +7,9 @@ export default function HomeCard(props: {
 }) {
     return (
         <div className="bg-gray-200 w-60 flex flex-col
-        justify-center items-center gap-1 p-3 rounded-md shadow-md">
+        justify-center items-center gap-1 p-3 rounded-md shadow-xl">
             <h2 className="text-rosa font-montserrat font-black text-2xl">{props.tituloCard}</h2>
-            <p className="text-[#181818] font-montserrat font-thin 
+            <p className="text-preto font-montserrat font-thin 
             text-md px-4 flex justify-center text-center"
             >Para saber mais, clique no botão abaixo</p>
             <button className="bg-rosa rounded-md p-2 hover:scale-110">

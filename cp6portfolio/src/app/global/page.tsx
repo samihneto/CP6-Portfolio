@@ -1,33 +1,33 @@
 "use client";
 
 import GlobalCard from '@/components/GlobalCard/GlobalCard';
-import React, { useState } from 'react';
+import { Alunos } from '@/interface/interface';
+import React, { useEffect, useState } from 'react';
 
-// Definindo o tipo para o aluno
-interface Aluno {
-  id: number;
-  nome: string;
-}
 
 export default function Sprints() {
   const [modal, setModal] = useState(false);
-  const [selectedAluno, setSelectedAluno] = useState<Aluno | null>(null); // Estado para o aluno selecionado
+  const [selectedAluno, setSelectedAluno] = useState<Alunos | null>(null); // Estado para o aluno selecionado
 
   const toggleModal = () => {
     setModal(!modal);
   };
 
-  const alunos: Aluno[] = [
-    { id: 1, nome: "Felipe Levy" },
-    { id: 2, nome: "Jennifer Suzuki" },
-    { id: 3, nome: "Samir Neto" },
-    { id: 4, nome: "Victor Gigante" },
-  ];
-
-  const handleAlunoClick = (aluno: Aluno) => {
+  const handleAlunoClick = (aluno: Alunos) => {
     setSelectedAluno(aluno);
     toggleModal();
   };
+
+  const [dados, setDados] = useState([]);
+
+  async function getDados() {
+    const res = await fetch('http://localhost:3000/api/dados')
+    const data = await res.json()
+    setDados(data)
+  }
+  useEffect(()=>{
+    getDados()
+  },[])
 
   return (
     <div>
@@ -35,13 +35,13 @@ export default function Sprints() {
         <h1 className="text-white text-6xl font-montserrat font-semibold">Global Solutions</h1>
       </div>
       <div className="flex flex-col justify-center items-center p-10 gap-y-10">
-        {alunos.map((aluno) => (
+        {dados && dados.map((aluno: any) => (
           <button
-            key={aluno.id} // Usar o ID como chave
+            key={aluno.avalId} // Usar o ID como chave
             onClick={() => handleAlunoClick(aluno)} // Define o aluno selecionado
             className="px-5 py-2 text-2xl font-montserrat font-bold text-white bg-rosa rounded-md hover:scale-110 transition-transform"
           >
-            {aluno.nome}
+            {aluno.alunoNome}
           </button>
         ))}
         {modal && (
@@ -49,7 +49,7 @@ export default function Sprints() {
             className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex justify-center items-center z-50"
             onClick={toggleModal} // Fecha o modal ao clicar fora dele
           >
-            <GlobalCard alunoCp={selectedAluno} />
+            <GlobalCard id={selectedAluno?.avalId} />
           </div>
         )}
       </div>
