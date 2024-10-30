@@ -6,7 +6,7 @@ export default async function SprintsId ({params}: Props) {
 
   return (
     <div>
-        <h1>Essa é a {params.tipoAval} de número {params.globalId} da matéria {params.materia}</h1>
+        <h1>Essa é a {params.tipoAval} de número {params.sprintId} da matéria {params.materia}</h1>
         <h1>Essa é a página de avaliação do Aluno: {params.alunoNome}</h1>
     </div>
   )
