@@ -2,6 +2,7 @@
 
 import CpCard from '@/components/CpCard/CpCard';
 import React, { useState } from 'react';
+import DadosJson from '../dados-json/page';
 
 // Definindo o tipo para o aluno
 interface Aluno {
@@ -53,7 +54,7 @@ export default function Checkpoints() {
           </div>
         )}
       </div>
-
+      <DadosJson />
     </div>
   );
 }
