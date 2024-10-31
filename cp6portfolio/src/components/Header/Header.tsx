@@ -21,7 +21,7 @@ export default function Header() {
             <Link href="/checkpoints">CHECKPOINT</Link>
           </li>
           <li className="text-white font-montserrat font-medium hover:font-black w-48 flex justify-center items-center">
-            <Link href="/global">GLOBAL SOLLUTION</Link>
+            <Link href="/global">GLOBAL SOLUTION</Link>
           </li>
           <li className="text-white font-montserrat font-medium hover:font-black w-48 flex justify-center items-center">
             <Link href="/sprints">CHALLENGE</Link>
