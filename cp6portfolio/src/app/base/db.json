@@ -1,0 +1,12 @@
+{
+    "aval": [
+        {"avalId": 1, "alunoNome": "Samir Neto", "materia": "Front-End", "tipoAval": "Checkpoint", "nota": 9
+        },
+        {"avalId": 2, "alunoNome": "Victor Gigante", "materia": "Python", "tipoAval": "Checkpoint", "nota": 10
+        },
+        {"avalId": 3, "alunoNome": "Jennifer Suzuki", "materia": "Banco de Dados", "tipoAval": "Checkpoint", "nota": 5
+        },
+        {"avalId": 4, "alunoNome": "Felipe Levy", "materia": "Python", "tipoAval": "Checkpoint", "nota": 6
+        }
+    ]
+}
